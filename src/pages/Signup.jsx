@@ -40,7 +40,7 @@ function Signup() {
     <div className=" min-h-screen flex items-center justify-center p-4 bg-base-200  bg-cover bg-center " style={{ backgroundImage: `url(${bdi_1})` }} > {/* Added a light bg for contrast */}
       <div className="card w-96 bg-white/20 backdrop-blur-md shadow-2xl border border-white/30 rounded-xl">
         <div className="card-body">
-          <h2 className="card-title justify-center text-3xl mb-6 font-bold text-white">Leetcode</h2> {/* Added mb-6 for spacing */}
+          <h2 className="card-title justify-center text-3xl mb-6 font-bold text-white">Code_Decode</h2> {/* Added mb-6 for spacing */}
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* First Name Field */}
             <div className="form-control">
