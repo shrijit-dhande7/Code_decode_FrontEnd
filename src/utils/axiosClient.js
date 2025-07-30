@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosClient =  axios.create({
-    baseURL: 'https://code-decode-front-end-ztb6.vercel.app/',
+    baseURL: 'https://code-decode-front-end-ztb6.vercel.app',
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
