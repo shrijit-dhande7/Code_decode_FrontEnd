@@ -8,10 +8,22 @@ import { registerUser } from '../authSlice';
 
 import bdi_1 from '../assets/login_sign_2.jpg'
 
+import { z } from 'zod';
+
 const signupSchema = z.object({
   firstName: z.string().min(3, "Minimum character should be 3"),
   emailId: z.string().email("Invalid Email"),
-  password: z.string().min(8, "Password is too weak")
+  password: z.string()
+    .min(8, "Password must be at least 8 characters")
+    .refine((val) => /[A-Z]/.test(val), {
+      message: "Password must contain at least one uppercase letter",
+    })
+    .refine((val) => /[0-9]/.test(val), {
+      message: "Password must contain at least one number",
+    })
+    .refine((val) => /[^A-Za-z0-9]/.test(val), {
+      message: "Password must contain at least one special character",
+    })
 });
 
 function Signup() {
